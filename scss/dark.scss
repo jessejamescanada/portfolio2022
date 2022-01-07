@@ -1,0 +1,80 @@
+.header {
+  color: white;
+  padding-bottom: 2rem;
+  background: url(../img/ravenel.jpg),
+    radial-gradient(rgb(77, 77, 77), rgb(177, 177, 177));
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.projects {
+  background: rgba(0, 0, 0, 0.712);
+}
+
+.about {
+  background: rgba(54, 54, 54, 0.575);
+
+  .aboutTextWrapper {
+    color: white;
+  }
+}
+
+.formGroup {
+  input {
+    border: #e71010 2px solid;
+  }
+}
+
+.tools {
+  background: black;
+
+  .toolWrapper {
+    color: white;
+  }
+}
+
+.contact {
+  background: rgb(143, 143, 143);
+
+  .textWrap {
+    color: white;
+
+    .socialWrap {
+      a {
+        color: white;
+      }
+      a:hover {
+        color: rgb(192, 192, 192);
+      }
+    }
+  }
+}
+
+.formBtn {
+  background: rgb(43, 43, 43);
+  color: white;
+}
+.formBtn:hover {
+  background: white;
+  color: black;
+}
+
+.formGroup {
+  input {
+    border: solid 1px black;
+  }
+}
+
+.textWrap {
+  .socialWrap {
+    a:hover {
+      color: #e71010;
+    }
+  }
+}
+
+.scrollUpBtn {
+  color: white;
+}

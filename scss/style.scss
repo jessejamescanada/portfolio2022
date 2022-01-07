@@ -1,0 +1,654 @@
+@mixin container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 1080px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+$project-background: #eaf4ff;
+$secondary-background: #fcf1ff;
+$boxShadow: 5px 5px 9px -2px rgba(0, 0, 0, 0.59);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.header {
+  color: white;
+  padding-bottom: 2rem;
+  background: url(../img/ravenel.jpg),
+    radial-gradient(rgb(218, 204, 204), rgb(177, 177, 177));
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: -3rem;
+}
+
+.imgMe {
+  box-shadow: 5px 5px 9px -2px rgba(0, 0, 0, 0.59);
+}
+
+.primaryTitle {
+  font-size: 3rem;
+}
+.containerWide {
+  @include container;
+  width: 100vw;
+  max-width: 90%;
+}
+.container {
+  @include container;
+
+  .bgSwitch {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: flex-end;
+    width: 12rem;
+
+    .bgSwitchTextContainer {
+      text-align: center;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .dotsContainer {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #red,
+    #blue,
+    #light,
+    #dark {
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      border: solid 1px white;
+      cursor: pointer;
+      //
+      box-shadow: $boxShadow;
+      transform: scale(1);
+      animation: pulse ease-in 2s infinite;
+      //
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+      }
+      70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+      }
+      100% {
+        transform: scale(0.9);
+        box-shadow: 0, 0, 0, 0 rgba(0, 0, 0, 0);
+      }
+    }
+
+    #red {
+      background: red;
+    }
+    #blue {
+      background: blue;
+    }
+    #dark {
+      background: #333;
+    }
+    #light {
+      background: cornsilk;
+    }
+  }
+}
+
+.about {
+  background: rgb(243, 237, 227);
+}
+
+.aboutContainer {
+  display: flex;
+  width: 100%;
+  height: 85vh;
+  justify-content: space-around;
+  align-items: center;
+
+  .imgContainer {
+    max-width: 230px;
+    width: 80%;
+
+    img {
+      width: 100%;
+      border-radius: 20px;
+    }
+  }
+  .textContainer {
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+
+    .introText {
+      color: #ff5d5d;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+}
+
+.aboutLink {
+  color: #ff5d5d;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.introText {
+  color: #ff5d5d;
+  font-weight: 700;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  // height: 85vh;
+  margin-top: 2rem;
+  // justify-content: space-around;
+  align-items: center;
+}
+
+.projectWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  margin: 2rem 0;
+
+  @media (max-width: 1350px) {
+    flex-direction: column;
+    // width: 100%;
+  }
+
+  .project1 {
+    width: 45%;
+    background: $project-background;
+    border-radius: 20px;
+    box-shadow: $boxShadow;
+  }
+  .project2 {
+    width: 45%;
+    background: $project-background;
+    border-radius: 20px;
+    box-shadow: $boxShadow;
+  }
+  .project3 {
+    width: 45%;
+    background: $project-background;
+    border-radius: 20px;
+    box-shadow: $boxShadow;
+  }
+  .project4 {
+    width: 45%;
+    background: $project-background;
+    border-radius: 20px;
+    box-shadow: $boxShadow;
+  }
+
+  .projectInd {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+    padding: 2rem;
+    transform: scale(1);
+    transition: transform 250ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+    }
+
+    p {
+      align-self: center;
+      // margin-left: 1rem;
+    }
+
+    .projImgTextWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .titleWrap {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+
+      p {
+        font-size: 1rem;
+      }
+    }
+    .projLinkWrapper {
+      display: flex;
+      width: 10rem;
+      justify-content: space-between;
+
+      a {
+        text-decoration: none;
+        font-size: 1.1rem;
+
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1350px) {
+    .projectInd,
+    .project1 {
+      width: 100%;
+    }
+  }
+
+  .two {
+    // flex-direction: row;
+
+    p {
+      margin-right: 1rem;
+    }
+  }
+
+  img {
+    width: 350px;
+    border-radius: 20px;
+  }
+  @media (max-width: 1600px) {
+    img {
+      width: 250px;
+      p {
+        font-size: 0.6rem;
+      }
+    }
+  }
+}
+
+.about {
+  display: flex;
+  height: 65vh;
+}
+
+.aboutWrapper {
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  align-items: center;
+
+  .aboutTextWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    p {
+      line-height: 1.5rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  img {
+    max-width: 230px;
+    border-radius: 50%;
+    box-shadow: $boxShadow;
+
+    @media (max-width: 840px) {
+      display: none;
+    }
+  }
+}
+
+.tools {
+  display: flex;
+  height: 45vh;
+
+  .toolWrapper {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
+
+.contact {
+  background: $project-background;
+}
+.contactContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem auto;
+  width: 100%;
+  padding: 20px;
+}
+
+.textWrap {
+  width: 100%;
+  align-self: flex-start;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+
+  .socialWrap {
+    display: flex;
+    margin: auto;
+    width: 50%;
+    justify-content: space-between;
+
+    a {
+      color: #555;
+    }
+    a:hover {
+      color: orange;
+    }
+  }
+}
+
+.formWrap {
+  color: #333;
+  width: 100%;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.formGroup {
+  margin-top: 15px;
+
+  label {
+    display: block;
+    color: #666;
+  }
+
+  input {
+    width: 100%;
+    padding: 1rem;
+    border: #ffd28e 2px solid;
+    border-radius: 5px;
+  }
+}
+
+.formBtn {
+  display: block;
+  background: darken($secondary-background, 3%);
+  font-size: 1.3rem;
+  width: 30%;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #444;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transform: scale(1);
+  box-shadow: $boxShadow;
+
+  @media (max-width: 850px) {
+    width: 100%;
+  }
+}
+
+.formBtn:hover {
+  background: white;
+  border: 1px solid red;
+  transform: scale(0.98);
+}
+
+.footer {
+  display: flex;
+  height: 4rem;
+  background: rgb(224, 224, 224);
+  text-align: center;
+}
+
+.scrollUpBtn {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  z-index: 1001;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  .about,
+  .container {
+    width: 100%;
+  }
+  .aboutWrapper,
+  .aboutTextWrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .scrollUpBtn::before {
+    display: none;
+  }
+  .projectWrapper .projectInd .projImgTextWrapper {
+    flex-direction: column;
+  }
+  .secondaryTitle {
+    font-size: 10px;
+  }
+  .projectWrapper .projectInd .titleWrap p {
+    font-size: 0.75rem;
+  }
+  .projectWrapper img {
+    display: flex;
+    margin: auto;
+  }
+  .container {
+  }
+  .imgMe {
+    display: none;
+  }
+  .containerWide {
+    width: 100vw;
+  }
+  .projectInd {
+    display: none;
+  }
+  .aboutWrapper {
+    width: 100%;
+  }
+  .aboutTextWrapper .primaryTitle {
+    text-align: center;
+  }
+  .aboutWrapper .aboutTextWrapper {
+    width: 95%;
+  }
+
+  .aboutWrapper .aboutTextWrapper p {
+    font-size: 0.5rem;
+  }
+  .aboutContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutContainer .textContainer {
+    text-align: center;
+  }
+  .contactContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 375px) {
+  .projectWrapper img {
+    width: 200px;
+  }
+}
+
+// Steps!  2) Hamburger Menu maybe
+
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1003;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: rgba(255, 179, 149, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .hamburger > div {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: white;
+}
+
+.menu-wrap .hamburger > div:after {
+  top: 10px;
+}
+
+// toggler animate
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+// turn lines into x
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+// rotate on hover when checked
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+// show menu
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: 0.5s;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: rgba(190, 140, 140, 0.493);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vh;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}

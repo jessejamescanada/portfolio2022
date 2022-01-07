@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3b56dc2a5c.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link id='themePick' rel="stylesheet" href="">
+    <title>Document</title>
+</head>
+<body>
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler" id="navi-toggle">
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+          <div>
+            <div>
+              <ul>
+                <!-- <li><a href="#home2">Home</a></li> -->
+                <li><a href="#projects"  class="menuLinks" >Projects</a></li>
+                <li><a href="#about" class="menuLinks">About Me</a></li>
+                <li><a href="#contact" class="menuLinks">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    <i class="fas fa-arrow-circle-up fa-2x scrollUpBtn"></i>
+    <section class="header" id=#home2>
+        <div class="container">
+            <div class="aboutContainer">
+                <div class="textContainer">
+                    <h2 class="primaryTitle">Hello! I'm Jesse</h2>
+                    <p>I'm a <span class="introText">front end developer</span> living in Charleston, SC. I love to learn new technologies and strive to implement best practices with my code. </p>
+                    
+                </div>
+                <div class="imgContainer">
+                    <img src="./img/me2.jpg" alt="" class='imgMe'>
+                </div>
+            </div>
+            <div class="bgSwitch">
+                <div class="bgSwitchTextContainer">
+                    <p>Switch Theme</p>
+                </div>
+                <div class="dotsContainer">
+                    <div data-mode="dark" class="themeDots" id="dark"></div>
+                    <div data-mode="light" class="themeDots" id="light"></div>
+                    <div data-mode="red" class="themeDots" id="red"></div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section class="projects" id="projects">
+        <div class="containerWide">
+            <div class="projectContainer">
+                <!-- <h2 class="primaryTitle">Projects</h2> -->
+                <div class="projectWrapper">
+                    <div class="projectInd project1">
+                        <div class="projImgTextWrapper">
+                        <a href="https://keen-wright-77b776.netlify.app/" class="projLink" target="_blank">
+                            <img src="./img/weather.png" alt="">
+                        </a>
+                        <div class="titleWrap">
+                        <h2 class="secondaryTitle">OpenWeather API</h2>
+                        <p>Using vanilla JavaScript, HTML and CSS I built a weather app using Fetch to connect to the OpenWeather API. I took it a step further by implementing Local Storage to save the users last location and I also added a 5 day weather forecast</p>
+                        </div> 
+                        </div>
+                        <div class="projLinkWrapper">
+                        <a href="https://github.com/jessejamescanada/weatherDec21" target="_blank">Github</a>
+                        <a href="https://keen-wright-77b776.netlify.app/" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="projectInd two project2 projectMove">
+                        <div class="projImgTextWrapper">
+                            
+                            <div class="titleWrap">
+                                <h2 class="secondaryTitle">Aspire Finance</h2>
+                                <p> A brochure style website I made for a Financial Planner. I created it with HTML/CSS and vanilla Javascript. It's fully responsive for both desktop and mobile.</p>
+                                </div> 
+                    
+                         <a href="https://aspirefincance.ca" target="_blank">
+                            <img src="./img/aspire.png" alt="">
+                            </a>            
+                        </div>
+                        <div class="projLinkWrapper">
+                            <a href="https://github.com/jessejamescanada/AspireFinance" class="projLink" target="_blank">Github</a>
+                            <a href="https://aspirefincance.ca" target="_blank">Live Demo</a>
+                            </div>
+                    </div>
+                    <div class="projectInd project3">
+                        <div class="projImgTextWrapper">
+                        <a href="https://youthful-golick-9bfc6a.netlify.app/" class="projLink" target="_blank">
+                            <img src="./img/incExp.png" alt="">
+                        </a>
+                        <div class="titleWrap">
+                            <h2 class="secondaryTitle">Finance Calculator</h2>
+                            <p>An income and expense calculator created with vanilla JavaScript and utilizing the array methods Map, Reduce & Filter to display information. LocalStorage was also used to save users input </p>
+                            </div> 
+                        </div>
+                        <div class="projLinkWrapper">
+                        <a href="https://github.com/jessejamescanada/IncExpCalc" target="_blank">Github</a>
+                        <a href="https://youthful-golick-9bfc6a.netlify.app/" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="projectInd two project4">
+                        <div class="projImgTextWrapper">
+                            <div class="titleWrap">
+                                <h2 class="secondaryTitle">Project 1</h2>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                </div> 
+                        <a href="" class="projLink">
+                            <img src="./img/ravenel.jpg" alt="">
+                        </a>
+                        
+                        </div>
+                        <div class="projLinkWrapper">
+                            <a href="">Github</a>
+                            <a href="">Live Demo</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="container">
+            <div class="aboutWrapper">
+                <div class="aboutTextWrapper">
+                    <h2 class="primaryTitle">About Me</h2>
+                    <p>Hey There! I'm a (mostly) self taught web developer with 3 years experiencing designing and developing websites for local businesses using HTML5, CSS, SASS, JavaScript, REACT and Node.js. I attended the JavaScript program at <a href="https://junocollege.com/" class="aboutLink" target="_blank">Juno College</a> in Toronto, Ontario is 2019. I've effectively built websites and web applications using best practices for desktop and mobile user experiences.  Previously I ran a successful self-owned 13 year professional photography business where I acquired the skills to manage collaborative projects, SEO practices and skills in sales and marketing.</p>
+                </div>
+                <img src="./img/Cartoonify.png" alt="" class="cartoonMe">
+            </div>
+        </div>
+    </section>
+    <section class="tools">
+        <div class="container">
+            <!-- <h2 class="primaryTitle">Tools I Use</h2> -->
+            <div class="toolWrapper">
+                <i class="fab fa-html5 fa-3x toolIcon"></i>
+                <i class="fab fa-css3-alt fa-3x toolIcon"></i>
+                <i class="fab fa-js-square fa-3x toolIcon"></i>
+                <i class="fab fa-sass fa-3x toolIcon"></i>
+                <i class="fab fa-git fa-3x toolIcon"></i>
+                <i class="fab fa-react fa-3x toolIcon"></i>
+                <i class="fab fa-github-square fa-3x toolIcon"></i>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contactContainer">
+                <div class="textWrap">
+                    <h2 class="primaryTitle">Lets Connect...</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <div class="socialWrap">
+                        <a href="#"><i class="fab fa-linkedin fa-2x sIcon"></i></a>
+                        <a href="#"><i class="fas fa-envelope fa-2x sIcon"></i></a>
+                        <a href="#"><i class="fab fa-github-square fa-2x sIcon"></i></a>
+                    </div>
+                </div>
+            <div class="formWrap">
+                <!-- <h1>Contact Me</h1> -->
+                <form>
+                    <div class="formGroup">
+                        <input type="text" name="name" id="name" placeholder="name">
+                    </div>
+                    <div class="formGroup">
+                        <input type="email" name="email" id="email" placeholder="email">
+                    </div>
+                    <div class="formGroup">
+                        <input type="text" name="message" id="message" placeholder="message">
+                    </div>
+                    <button type="submit" class="formBtn">Contact Me</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="container">
+            <p>Designed by Jesse Giammattolo</p>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- when switching theme colors turn background colors on projects to first (light blue) color -->
