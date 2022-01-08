@@ -336,6 +336,10 @@ a:visited {
   }
 }
 
+.toolIcon:nth-child(odd) {
+  color: #7c7c7c;
+}
+
 .contact {
   background: $project-background;
 }
@@ -542,10 +546,11 @@ a:visited {
   width: 60px;
   height: 60px;
   padding: 1rem;
-  background: rgba(255, 179, 149, 0.7);
+  background: rgba(31, 31, 31, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 5px;
 }
 
 .menu-wrap .hamburger > div {
@@ -620,7 +625,7 @@ a:visited {
 }
 
 .menu-wrap .menu > div {
-  background: rgba(190, 140, 140, 0.493);
+  background: rgba(31, 31, 31, 0.7);
   border-radius: 50%;
   width: 200vw;
   height: 200vh;
