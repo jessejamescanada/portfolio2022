@@ -14,7 +14,7 @@
 <body>
     <div class="menu-wrap">
         <input type="checkbox" class="toggler" id="navi-toggle">
-        <div class="hamburger"><div></div></div>
+        <div class="hamburger"><div class="line"></div></div>
         <div class="menu">
           <div>
             <div>
@@ -165,7 +165,7 @@
                 </div>
             <div class="formWrap">
                 <!-- <h1>Contact Me</h1> -->
-                <form>
+                <form method="post" action="contactForm.php">
                     <div class="formGroup">
                         <input type="text" name="name" id="name" placeholder="name">
                     </div>
@@ -173,9 +173,10 @@
                         <input type="email" name="email" id="email" placeholder="email">
                     </div>
                     <div class="formGroup">
-                        <input type="text" name="message" id="message" placeholder="message">
+                        <input type="textarea" name="message" id="message" placeholder="message">
                     </div>
-                    <button type="submit" class="formBtn">Contact Me</button>
+                    <!-- <button type="submit" class="formBtn">Contact Me</button> -->
+                    <input type="submit" class="formBtn" value="Submit">
                 </form>
             </div>
             </div>
