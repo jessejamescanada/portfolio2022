@@ -3,8 +3,8 @@
     $visitor_email = $_POST['email'];
     $message = $_POST['message'];
 
-    $email_from = 'james_jesse77@yahoo.ca'
-    $email_subject = "New WebDev Form Submission"
+    $email_from = 'james_jesse77@yahoo.ca';
+    $email_subject = "New WebDev Form Submission";
     $email_body = "User Name: $name.\n".
                     "User Email: $visitor_email.\n".
                         "User Message: $message.\n";
@@ -18,6 +18,6 @@
 
     mail($to,$email_subject,$email_body,$headers);
 
-    header("Location: index.html")
+    header("Location: index.html");
 
 ?>
