@@ -1,23 +1,15 @@
 <?php
-    $name = $_POST['name'];
-    $visitor_email = $_POST['email'];
-    $message = $_POST['message'];
+    if(isset($_POST['submit'])){
+        $name = $_POST['name'];
+        $mailFrom = $_POST['email'];
+        $message = $_POST['message'];
 
-    $email_from = 'james_jesse77@yahoo.ca';
-    $email_subject = "New WebDev Form Submission";
-    $email_body = "User Name: $name.\n".
-                    "User Email: $visitor_email.\n".
-                        "User Message: $message.\n";
+        $mailTo = "giammattolo@hotmail.com";
+        $headers = "From: ".$mailFrom;
+        $txt = "You have received an email from ".$name.".\n\n".$message;
 
-                        
-    $to = "giammattolo@hotmail.com";
-
-    $headers = "From: $email_from \r\n";
-
-    $headers = "Reply-To: $visitor_email \r\n";
-
-    mail($to,$email_subject,$email_body,$headers);
-
-    header("Location: index.html");
+        mail($mailTo, $txt, $headers);
+        header("Location: index.html?mailsend");
+    }
 
 ?>
