@@ -402,7 +402,8 @@ a:visited {
     color: #666;
   }
 
-  input {
+  input,
+  textarea {
     width: 100%;
     padding: 1rem;
     border: #ffd28e 2px solid;
